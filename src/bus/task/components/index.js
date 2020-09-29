@@ -16,12 +16,13 @@ import {
 import { useId } from '@uifabric/react-hooks';
 
 // Hooks
-import { useTasksLoader } from '../hooks/useTasksLoader';
-import {useTasksCleaner} from '../hooks/useTasksCleaner';
 import { useProfile } from '../../customer/hooks/useProfile';
 import { useLogout } from '../../customer/hooks/useLogout';
-import { useTaskCleaner } from '../hooks/useTaskCleaner';
-import { useTaskUpdater } from '../hooks/useTaskUpdater';
+import { useTaskCreator } from "../../customer/hooks/useTaskCreator";
+import { useTaskUpdater } from "../../customer/hooks/useTaskUpdater";
+import { useTaskCleaner } from "../../customer/hooks/useTaskCleaner";
+import { useTasksCleaner } from "../../customer/hooks/useTasksCleaner";
+import { useTaskLoader } from "../../customer/hooks/useTaskLoader";
 
 // Styles
 import styles from '../styles.module.scss';
@@ -30,7 +31,7 @@ import styles from '../styles.module.scss';
 import { TaskCreator } from './taskCreator';
 
 export const Task = () => {
-  const { tasks, loading, refetch } = useTasksLoader();
+  const { tasks, loading, refetch } = useTaskLoader();
   const { authenticatedCustomer } = useProfile();
   const { logout } = useLogout();
   const { removeAllTasks } = useTasksCleaner();
