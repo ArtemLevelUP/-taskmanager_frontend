@@ -9,7 +9,7 @@ import { Field, Form, Formik } from 'formik';
 import { FormikTextField } from 'formik-office-ui-fabric-react';
 
 // Hooks
-import { useTaskCreator } from './hooks/useTaskCreator';
+import { useTaskCreator } from "../../customer/hooks/useTaskCreator";
 
 // Validators
 import { validateInput } from '../../validators/validateInput';
