@@ -16,13 +16,12 @@ import {
 import { useId } from '@uifabric/react-hooks';
 
 // Hooks
+import { useTaskLoader } from '../hooks/useTaskLoader';
+import { useTasksCleaner } from '../hooks/useTasksCleaner';
+import { useTaskCleaner } from '../hooks/useTaskCleaner';
 import { useProfile } from '../../customer/hooks/useProfile';
 import { useLogout } from '../../customer/hooks/useLogout';
-import { useTaskCreator } from "../../customer/hooks/useTaskCreator";
-import { useTaskUpdater } from "../../customer/hooks/useTaskUpdater";
-import { useTaskCleaner } from "../../customer/hooks/useTaskCleaner";
-import { useTasksCleaner } from "../../customer/hooks/useTasksCleaner";
-import { useTaskLoader } from "../../customer/hooks/useTaskLoader";
+import { useTaskUpdater } from '../hooks/useTaskUpdater';
 
 // Styles
 import styles from '../styles.module.scss';

@@ -1,0 +1,8 @@
+query getTasks {
+    tasks {
+        id
+        title
+        description
+        isCompleted
+    }
+}
